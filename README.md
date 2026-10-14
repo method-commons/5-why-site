@@ -1,6 +1,6 @@
-# 5 Warum – Kurzschulung
+# 5 Why – Kurzschulung
 
-One-Pager-Webseite, die das methodische Arbeiten mit der 5-Warum-Methode (5 Why) erklärt und kurz schult: Problem beschreiben nach 5W2H, Warum-Kette mit Belegen und Verzweigungen, Daher-Probe, Grundursache, Blickwinkel (3 × 5 Warum) und Ishikawa, Maßnahmen nach Art und Stärke, Wirksamkeit – mit interaktiver Ketten-Werkstatt (Prüfungen nach den Regeln der App) und Wissenscheck.
+One-Pager-Webseite, die das methodische Arbeiten mit der 5-Why-Methode erklärt und kurz schult: Problem beschreiben nach 5W2H, Warum-Kette mit Belegen und Verzweigungen, Daher-Probe, Grundursache, Blickwinkel (3 × 5 Why) und Ishikawa, Maßnahmen nach Art und Stärke, Wirksamkeit – mit interaktiver Ketten-Werkstatt (Prüfungen nach den Regeln der App) und Wissenscheck.
 
 Öffnen: `index.html` direkt im Browser (keine Build-Schritte nötig).
 

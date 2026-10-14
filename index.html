@@ -1,0 +1,1287 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 Warum</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%234f46e5'/%3E%3Cpath%20d='M8.5%2010.5v5.5h2M12%2018.5v5.5h6.5'%20fill='none'%20stroke='%23fff'%20stroke-width='1.6'%20stroke-linecap='round'%20stroke-linejoin='round'%20opacity='.55'/%3E%3Crect%20x='6'%20y='6'%20width='14'%20height='4.5'%20rx='2.25'%20fill='%23fff'/%3E%3Crect%20x='10.5'%20y='13.75'%20width='14'%20height='4.5'%20rx='2.25'%20fill='%23fff'%20opacity='.55'/%3E%3Ccircle%20cx='22.5'%20cy='24'%20r='3.4'%20fill='none'%20stroke='%23fb923c'%20stroke-width='2.4'/%3E%3C/svg%3E">
+<meta name="description" content="Eine kompakte Schulung zur 5-Warum-Methode: Problem beschreiben, Warum-Kette mit Belegen, Grundursache, Blickwinkel und Ishikawa, wirksame Maßnahmen – mit interaktiver Ketten-Werkstatt und Wissenscheck.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --surface-2: #efede6;
+    --text: #1d1d1b;
+    --muted: #5d5c57;
+    --line: #dcd9cf;
+    --accent: #2f5bd3;
+    --logo: #4f46e5;
+    --accent-soft: #e3eafc;
+    --accent-text: #ffffff;
+    --ok: #1f7a4d;
+    --ok-soft: #dff2e8;
+    --warn: #a4501a;
+    --warn-soft: #fbe9dc;
+    --bad: #b42323;
+    --bad-soft: #fde4e4;
+    --root: #b42318;
+    --root-soft: #fef3f2;
+    --root-line: #fbd3cf;
+    --lens-1: #4f46e5;
+    --lens-2: #0e7490;
+    --lens-3: #7c3aed;
+    --spine: #3f3e3a;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 6px 24px rgba(0,0,0,.06);
+    --radius: 14px;
+    --maxw: 1080px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141413;
+      --surface: #1d1d1b;
+      --surface-2: #262623;
+      --text: #ecebe6;
+      --muted: #a3a29b;
+      --line: #36352f;
+      --accent: #7c9cf5;
+      --logo: #8b8cf8;
+      --accent-soft: #23305a;
+      --accent-text: #0f1424;
+      --ok: #6fd1a0;
+      --ok-soft: #173a29;
+      --warn: #f2a46f;
+      --warn-soft: #3d2516;
+      --bad: #ff8f8f;
+      --bad-soft: #3d1a1c;
+      --root: #ff8787;
+      --root-soft: #3a1a1c;
+      --root-line: #6b2a2d;
+      --lens-1: #8b8cf8;
+      --lens-2: #22b8cf;
+      --lens-3: #b197fc;
+      --spine: #c9c7bf;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141413;
+    --surface: #1d1d1b;
+    --surface-2: #262623;
+    --text: #ecebe6;
+    --muted: #a3a29b;
+    --line: #36352f;
+    --accent: #7c9cf5;
+    --logo: #8b8cf8;
+    --accent-soft: #23305a;
+    --accent-text: #0f1424;
+    --ok: #6fd1a0;
+    --ok-soft: #173a29;
+    --warn: #f2a46f;
+    --warn-soft: #3d2516;
+    --bad: #ff8f8f;
+    --bad-soft: #3d1a1c;
+    --root: #ff8787;
+    --root-soft: #3a1a1c;
+    --root-line: #6b2a2d;
+    --lens-1: #8b8cf8;
+    --lens-2: #22b8cf;
+    --lens-3: #b197fc;
+    --spine: #c9c7bf;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; line-height: 1.2; margin: 0 0 .5em; }
+  h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: -.01em; }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  h3 { font-size: 1.15rem; font-family: Inter, sans-serif; font-weight: 600; }
+  p { margin: 0 0 1em; }
+  a { color: var(--accent); }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
+  section { padding: 72px 0; border-top: 1px solid var(--line); }
+  .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; font-weight: 600; color: var(--accent); margin-bottom: .75em; display: block; }
+  .lead { font-size: 1.15rem; color: var(--muted); max-width: 62ch; }
+  .muted { color: var(--muted); }
+
+  /* Nav */
+  nav.top {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .wrap { display: flex; align-items: center; gap: 24px; height: 60px; }
+  .brand { font-weight: 700; text-decoration: none; color: var(--text); display: flex; gap: 10px; align-items: center; white-space: nowrap; }
+  .logo {
+    width: 28px; height: 28px; flex-shrink: 0; color: var(--logo);
+    filter: drop-shadow(0 2px 4px color-mix(in srgb, var(--logo) 35%, transparent));
+  }
+  nav.top ul { list-style: none; margin: 0 0 0 auto; padding: 0; display: flex; gap: 18px; font-size: .9rem; }
+  nav.top ul a { color: var(--muted); text-decoration: none; }
+  nav.top ul a:hover { color: var(--text); }
+  .menu-toggle { display: none; background: none; border: 1px solid var(--line); color: var(--text); border-radius: 999px; height: 34px; padding: 0 14px; font: 600 .85rem Inter, sans-serif; cursor: pointer; align-items: center; gap: 6px; }
+  @media (max-width: 960px) {
+    nav.top .wrap { gap: 10px; }
+    .menu-toggle { display: inline-flex; }
+    nav.top ul {
+      display: none; position: absolute; left: 0; right: 0; top: 60px;
+      flex-direction: column; gap: 0; margin: 0; padding: 8px 16px 16px;
+      background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: var(--shadow);
+      max-height: calc(100vh - 60px); overflow-y: auto;
+    }
+    nav.top.open ul { display: flex; }
+    nav.top ul a { display: block; padding: 12px 4px; font-size: 1rem; border-bottom: 1px solid var(--line); }
+    nav.top ul li:last-child a { border-bottom: 0; }
+  }
+  @media (max-width: 400px) { .brand-text { font-size: .9rem; } }
+  @media (max-width: 370px) { .menu-label { display: none; } .menu-toggle { padding: 0 11px; } .brand { gap: 8px; } }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px; border-radius: 999px; font-weight: 600; font-size: .95rem;
+    text-decoration: none; border: 1px solid transparent; cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-primary { background: var(--accent); color: var(--accent-text); }
+  .btn-ghost { border-color: var(--line); color: var(--text); background: var(--surface); }
+  .btn-sm { padding: 8px 14px; font-size: .85rem; }
+  .btn:hover { filter: brightness(1.05); }
+  .btn:disabled { opacity: .45; cursor: default; filter: none; }
+
+  /* Hero */
+  .hero { padding: 88px 0 72px; border-top: 0; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
+  .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  .hero-meta { display: flex; gap: 24px; margin-top: 32px; font-size: .9rem; color: var(--muted); flex-wrap: wrap; }
+  .hero-meta b { color: var(--text); display: block; font-size: 1.2rem; }
+
+  .hero-box {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 20px; box-shadow: var(--shadow); overflow: hidden;
+  }
+  .hero-box svg { width: 100%; height: auto; display: block; }
+
+  /* Cards */
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (max-width: 860px) { .grid-3, .grid-2 { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 601px) and (max-width: 860px) { .grid-3 > :last-child:nth-child(odd) { grid-column: 1 / -1; } }
+  @media (max-width: 600px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+  @media (max-width: 860px) { .hero-box { max-width: 520px; width: 100%; } }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .card p:last-child { margin-bottom: 0; }
+  .icon { width: 36px; height: 36px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; margin-bottom: 14px; font-weight: 700; }
+  .icon svg { width: 20px; height: 20px; }
+
+  .two-col > *, .grid-2 > *, .grid-3 > *, .demo-out > *, .hero-grid > * { min-width: 0; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  @media (max-width: 860px) { .two-col { grid-template-columns: 1fr; gap: 24px; } }
+
+  blockquote {
+    margin: 0; padding: 20px 24px; border-left: 3px solid var(--accent);
+    background: var(--surface); border-radius: 0 var(--radius) var(--radius) 0;
+    font-family: Fraunces, Georgia, serif; font-size: 1.15rem;
+  }
+  blockquote footer { font-family: Inter, sans-serif; font-size: .85rem; color: var(--muted); margin-top: 10px; }
+
+  /* Glossary */
+  dl.terms { margin: 0; display: grid; gap: 14px; }
+  dl.terms div { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; }
+  dl.terms dt { font-weight: 600; }
+  dl.terms dd { margin: 4px 0 0; color: var(--muted); font-size: .95rem; }
+
+  /* Steps */
+  ol.steps { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 16px; counter-reset: step; }
+  ol.steps li {
+    counter-increment: step; display: grid; grid-template-columns: 56px 1fr; gap: 20px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px;
+  }
+  ol.steps li::before {
+    content: counter(step); font-family: Fraunces, Georgia, serif; font-size: 1.6rem; font-weight: 700;
+    width: 48px; height: 48px; border-radius: 12px; background: var(--accent-soft); color: var(--accent);
+    display: grid; place-items: center;
+  }
+  ol.steps h3 { margin-bottom: .3em; }
+  ol.steps p { margin: 0; color: var(--muted); }
+  ol.steps .tip { margin-top: 10px; font-size: .9rem; color: var(--text); }
+  ol.steps .tip b { color: var(--accent); }
+  @media (max-width: 560px) { ol.steps li { grid-template-columns: 1fr; gap: 10px; } }
+
+  /* 5W2H */
+  .w2h { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 24px; }
+  @media (max-width: 860px) { .w2h { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 420px) { .w2h { grid-template-columns: 1fr; } }
+  .w2h div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; border-top: 4px solid var(--accent); }
+  .w2h b { display: block; font-family: Fraunces, Georgia, serif; font-size: 1.1rem; }
+  .w2h span { display: block; font-size: .85rem; color: var(--muted); }
+  .w2h em { display: block; font-style: normal; font-size: .82rem; margin-top: 6px; background: var(--surface-2); border-radius: 7px; padding: 4px 8px; }
+  .statement {
+    margin-top: 24px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 0 12px 12px 0; padding: 16px 20px; font-family: Fraunces, Georgia, serif; font-size: 1.1rem; line-height: 1.5;
+  }
+  .statement small { display: block; font: 600 .75rem Inter, sans-serif; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 4px; }
+
+  .vs { display: grid; gap: 8px; margin-top: 12px; }
+  .vs div { display: grid; grid-template-columns: 26px 1fr; gap: 6px; font-size: .92rem; padding: 8px 12px; border-radius: 9px; }
+  .vs .no { background: var(--warn-soft); color: var(--warn); }
+  .vs .yes { background: var(--ok-soft); color: var(--ok); }
+  .vs small { display: block; opacity: .85; font-size: .82rem; }
+
+  /* Chain */
+  .chain { display: grid; gap: 0; margin-top: 8px; }
+  .node {
+    position: relative; display: grid; grid-template-columns: 44px 1fr; gap: 14px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;
+  }
+  .node + .node, .branch + .node, .node + .branch { margin-top: 22px; }
+  .node + .node::before, .branch + .node::before, .node + .branch::before {
+    content: '↑'; position: absolute; top: -21px; left: 30px; font-size: .8rem; color: var(--muted); line-height: 20px;
+  }
+  .lvl { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font: 700 .95rem Fraunces, Georgia, serif; }
+  .node.problem .lvl { background: var(--surface-2); color: var(--muted); font-size: 1.1rem; }
+  .node.root { background: var(--root-soft); border-color: var(--root-line); }
+  .node.root .lvl { background: var(--root); color: #fff; }
+  .node .q { font-size: .8rem; color: var(--muted); margin: 0 0 2px; }
+  .node .a { font-weight: 600; margin: 0; }
+  .node .ev { font-size: .85rem; color: var(--muted); margin: 4px 0 0; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .pill { display: inline-block; font: 600 .72rem Inter, sans-serif; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+  .pill.ok { background: var(--ok-soft); color: var(--ok); }
+  .pill.warn { background: var(--warn-soft); color: var(--warn); }
+  .pill.bad { background: var(--bad-soft); color: var(--bad); }
+  .pill.root { background: var(--root); color: #fff; }
+  .branch { position: relative; border: 1px dashed var(--line); border-radius: 12px; padding: 10px 12px 12px; }
+  .branch > p { font-size: .8rem; color: var(--muted); margin: 0 0 8px; }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { font-size: .85rem; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+  .chip.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .chip.off { text-decoration: line-through; color: var(--muted); }
+
+  .readback { background: var(--surface-2); border-radius: 12px; padding: 14px 16px; font-size: .92rem; line-height: 1.7; }
+  .readback b { color: var(--accent); font-weight: 600; }
+
+  /* Demo: workshop */
+  .demo-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+  .demo-tools { display: flex; gap: 10px; flex-wrap: wrap; }
+  .demo-out { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  @media (max-width: 860px) { .demo-out { grid-template-columns: 1fr; } }
+  .form { display: grid; gap: 14px; }
+  .field label, .field .label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 4px; }
+  .field small, .form-title small { font-weight: 400; color: var(--muted); }
+  .field input[type="text"], .field select, .field textarea {
+    width: 100%; padding: 10px 12px; border-radius: 9px; border: 1px solid var(--line);
+    background: var(--bg); color: var(--text); font: inherit; font-size: .95rem;
+  }
+  .field textarea { min-height: 76px; resize: vertical; line-height: 1.5; }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  @media (max-width: 520px) { .row-3 { grid-template-columns: 1fr; } }
+  @media (max-width: 420px) { .row-2 { grid-template-columns: 1fr; } }
+  .form-title { font: 600 1rem Inter, sans-serif; margin: 6px 0 0; display: flex; align-items: center; gap: 10px; }
+  .form-title .num { width: 26px; height: 26px; border-radius: 8px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font: 700 .9rem Fraunces, Georgia, serif; }
+  .divider { border: 0; border-top: 1px dashed var(--line); margin: 6px 0; }
+  .whys { display: grid; gap: 10px; }
+  .why-row { display: grid; grid-template-columns: 34px 1fr 132px 28px; gap: 8px; align-items: center; }
+  .why-row .lvl { width: 34px; height: 34px; font-size: .85rem; border-radius: 9px; }
+  .why-row.is-root .lvl { background: var(--root); color: #fff; }
+  .why-row input[type="text"], .why-row select {
+    width: 100%; min-width: 0; padding: 9px 10px; border-radius: 9px; border: 1px solid var(--line);
+    background: var(--bg); color: var(--text); font: inherit; font-size: .9rem;
+  }
+  .why-row .rootpick { display: grid; place-items: center; }
+  .why-row .rootpick input { width: 18px; height: 18px; accent-color: var(--root); margin: 0; }
+  .why-head { display: grid; grid-template-columns: 34px 1fr 132px 28px; gap: 8px; font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; font-weight: 600; }
+  .why-head span:last-child { text-align: center; }
+  @media (max-width: 480px) {
+    .why-row, .why-head { grid-template-columns: 34px 1fr 28px; }
+    .why-row select { grid-column: 2; grid-row: 2; }
+    .why-head span:nth-child(3) { display: none; }
+    .why-row .rootpick { grid-column: 3; grid-row: 1; }
+  }
+  .row-tools { display: flex; gap: 8px; flex-wrap: wrap; }
+  .check-line { display: flex; gap: 10px; align-items: flex-start; font-size: .92rem; }
+  .check-line input { width: 18px; height: 18px; accent-color: var(--accent); margin-top: 3px; flex-shrink: 0; }
+
+  .out-block + .out-block { margin-top: 22px; }
+  .out-block h3 { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .out-block h3 small { font: 500 .8rem Inter, sans-serif; color: var(--muted); }
+  .preview-statement { font-family: Fraunces, Georgia, serif; font-size: 1.05rem; line-height: 1.5; background: var(--surface-2); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+  .preview-statement .missing { color: var(--muted); font-family: Inter, sans-serif; font-size: .9rem; font-style: italic; }
+  ul.hints { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .9rem; }
+  ul.hints li { display: grid; grid-template-columns: 22px 1fr; gap: 8px; align-items: start; }
+  ul.hints .sym { width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center; font-size: .75rem; font-weight: 700; background: var(--surface-2); color: var(--muted); }
+  ul.hints .ok .sym { background: var(--ok-soft); color: var(--ok); }
+  ul.hints .warn .sym { background: var(--warn-soft); color: var(--warn); }
+  ul.hints .bad .sym { background: var(--bad-soft); color: var(--bad); }
+  ul.hints b { font-weight: 600; }
+  .status { padding: 10px 14px; border-radius: 10px; font-size: .9rem; margin-top: 14px; }
+  .status.ok { background: var(--ok-soft); color: var(--ok); }
+  .status.warn { background: var(--warn-soft); color: var(--warn); }
+  .status.bad { background: var(--bad-soft); color: var(--bad); }
+  .status.info { background: var(--surface-2); color: var(--muted); }
+
+  /* Lenses */
+  .lens { border-top: 4px solid var(--lc); }
+  .lens h3 { color: var(--lc); margin-bottom: .2em; }
+  .lens .qq { font-family: Fraunces, Georgia, serif; font-size: 1.05rem; margin: 6px 0 10px; }
+  .lens .ex { font-size: .85rem; background: var(--surface-2); border-radius: 8px; padding: 8px 12px; margin-top: 10px; }
+  .lens .ex b { display: block; font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+
+  .fish-box { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .fish-box svg { display: block; width: 100%; max-width: 860px; min-width: 620px; margin: 0 auto; height: auto; }
+  .scroll-hint { display: none; font-size: .8rem; color: var(--muted); margin: 10px 0 0; }
+  @media (max-width: 680px) { .scroll-hint { display: block; } }
+  .presets { display: grid; gap: 10px; margin-top: 14px; }
+  .presets div { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; font-size: .92rem; }
+  .presets b { display: block; }
+  .presets span { color: var(--muted); }
+
+  /* Actions */
+  .kind .icon { font-size: 1.1rem; }
+  .kind .ex { margin-top: 12px; font-size: .85rem; background: var(--surface-2); border-radius: 8px; padding: 8px 12px; }
+  .ladder { display: grid; gap: 8px; margin-top: 16px; }
+  .rung { display: grid; grid-template-columns: 1fr; gap: 2px; }
+  .rung .bar { height: 34px; border-radius: 9px; background: color-mix(in srgb, var(--accent) var(--p), var(--surface-2)); color: var(--text); display: flex; align-items: center; padding: 0 12px; font-weight: 600; font-size: .9rem; width: var(--w); min-width: 190px; max-width: 100%; }
+  .rung:nth-child(-n+2) .bar { color: var(--accent-text); }
+  .rung small { color: var(--muted); font-size: .82rem; padding-left: 2px; }
+  ul.checklist { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; font-size: .95rem; }
+  ul.checklist li { display: grid; grid-template-columns: 22px 1fr; gap: 8px; }
+  ul.checklist li::before { content: '☐'; color: var(--accent); }
+
+  /* Do / Don't */
+  .dd h3 { display: flex; align-items: center; gap: 8px; }
+  .dd ul { margin: 0; padding-left: 1.2em; }
+  .dd li { margin-bottom: .5em; }
+  .dd.do h3 { color: var(--ok); }
+  .dd.dont h3 { color: var(--warn); }
+
+  /* Quiz */
+  .quiz { display: grid; gap: 16px; }
+  .quiz .qz { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; }
+  .quiz .qz p { font-weight: 600; }
+  .quiz .opts { display: grid; gap: 8px; }
+  .quiz button {
+    text-align: left; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line);
+    background: var(--bg); color: var(--text); font: inherit; cursor: pointer;
+  }
+  .quiz button:hover:not(:disabled) { border-color: var(--accent); }
+  .quiz button.right { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
+  .quiz button.wrong { background: var(--warn-soft); border-color: var(--warn); color: var(--warn); }
+  .quiz .why { margin-top: 12px; font-size: .9rem; color: var(--muted); display: none; }
+  .quiz .qz.done .why { display: block; }
+
+  /* CTA */
+  .cta { background: var(--accent); color: var(--accent-text); border-radius: 20px; padding: 48px 40px; display: grid; grid-template-columns: 1.4fr auto; gap: 24px; align-items: center; }
+  .cta p { opacity: .9; margin: 0; }
+  .cta .btn { background: var(--accent-text); color: var(--accent); }
+  @media (max-width: 760px) { .cta { grid-template-columns: 1fr; padding: 32px 24px; } }
+
+  footer.site { padding: 40px 0 56px; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); }
+  footer.site .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media (max-width: 640px) {
+    section { padding: 48px 0; }
+    .hero { padding: 40px 0 48px; }
+    .hero-grid { gap: 32px; }
+    .lead { font-size: 1.05rem; }
+    .hero .actions .btn, .demo-tools .btn { flex: 1 1 auto; justify-content: center; }
+    .demo-tools { width: 100%; }
+    .card { padding: 20px; }
+    ol.steps li { padding: 18px 20px; }
+    ol.steps li::before { width: 40px; height: 40px; font-size: 1.3rem; }
+    .cta .btn { justify-content: center; }
+  }
+  .theme-toggle { margin-left: 8px; background: none; border: 1px solid var(--line); color: var(--text); border-radius: 999px; width: 34px; height: 34px; cursor: pointer; display: grid; place-items: center; flex-shrink: 0; }
+  @media (max-width: 960px) { .theme-toggle { margin-left: auto; } }
+  @media (hover: none) { .quiz button:hover:not(:disabled) { border-color: var(--line); } }
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Hauptnavigation">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="currentColor"/>
+        <path d="M8.5 10.5v5.5h2M12 18.5v5.5h6.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+        <rect x="6" y="6" width="14" height="4.5" rx="2.25" fill="#fff"/>
+        <rect x="10.5" y="13.75" width="14" height="4.5" rx="2.25" fill="#fff" opacity=".55"/>
+        <circle cx="22.5" cy="24" r="3.4" fill="none" stroke="#fb923c" stroke-width="2.4"/>
+      </svg>
+      <span class="brand-text">5 Warum</span>
+    </a>
+    <ul id="navMenu">
+      <li><a href="#grundidee">Grundidee</a></li>
+      <li><a href="#ablauf">Ablauf</a></li>
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#kette">Warum-Kette</a></li>
+      <li><a href="#werkstatt">Werkstatt</a></li>
+      <li><a href="#blickwinkel">Blickwinkel</a></li>
+      <li><a href="#massnahmen">Maßnahmen</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel umschalten"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menü öffnen"><span aria-hidden="true">☰</span> <span class="menu-label">Menü</span></button>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Kurzschulung · Ursachenanalyse</span>
+        <h1>Ursachen finden statt Symptome bekämpfen</h1>
+        <p class="lead">Mit der 5-Warum-Methode fragst du so lange „Warum?“, bis du bei der Grundursache eines Problems ankommst – und legst Maßnahmen fest, die genau dort ansetzen. In 20 Minuten lernst du, Probleme sauber zu beschreiben, Antworten zu belegen und wirksame Maßnahmen zu finden.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#grundidee">Schulung starten ↓</a>
+          <a class="btn btn-ghost" href="https://method-commons.github.io/5-why-app/" target="_blank" rel="noopener">Zur 5-Warum-App ↗</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>5</b>Schritte</div>
+          <div><b>~20 min</b>Lesezeit</div>
+          <div><b>1</b>Ketten-Werkstatt</div>
+        </div>
+      </div>
+      <div class="hero-box" aria-hidden="true">
+        <svg viewBox="0 0 420 300">
+          <style>
+            .h-prob { fill: var(--surface-2); stroke: var(--line); }
+            .h-node { fill: var(--surface); stroke: var(--line); }
+            .h-root { fill: var(--root-soft); stroke: var(--root-line); }
+            .h-lvl { fill: var(--accent-soft); }
+            .h-lvlt { font: 700 11px Fraunces, Georgia, serif; fill: var(--accent); }
+            .h-rlvl { fill: var(--root); }
+            .h-rlvlt { font: 700 11px Fraunces, Georgia, serif; fill: #fff; }
+            .h-txt { font: 600 12px Inter, sans-serif; fill: var(--text); }
+            .h-sm { font: 500 10px Inter, sans-serif; fill: var(--muted); }
+            .h-ok { font: 700 10px Inter, sans-serif; fill: var(--ok); }
+            .h-okb { fill: var(--ok-soft); }
+            .h-wa { font: 700 10px Inter, sans-serif; fill: var(--warn); }
+            .h-wab { fill: var(--warn-soft); }
+            .h-rt { font: 700 10px Inter, sans-serif; fill: #fff; }
+            .h-line { stroke: var(--line); stroke-width: 1.5; fill: none; }
+          </style>
+          <rect class="h-prob" x="10" y="6" width="400" height="34" rx="9"/>
+          <text class="h-sm" x="24" y="27">PROBLEM</text>
+          <text class="h-txt" x="82" y="27">Gäste warten bis zu 40 Min statt höchstens 10 Min</text>
+          <path class="h-line" d="M30 40v10M50 84v10M70 128v10M90 172v10M110 216v10"/>
+
+          <rect class="h-node" x="20" y="50" width="390" height="34" rx="9"/>
+          <rect class="h-lvl" x="26" y="55" width="26" height="24" rx="6"/><text class="h-lvlt" x="39" y="71" text-anchor="middle">W1</text>
+          <text class="h-txt" x="62" y="71">Küche kam mit den Pommes nicht hinterher</text>
+          <rect class="h-okb" x="346" y="58" width="56" height="18" rx="9"/><text class="h-ok" x="374" y="71" text-anchor="middle">✓ belegt</text>
+
+          <rect class="h-node" x="40" y="94" width="370" height="34" rx="9"/>
+          <rect class="h-lvl" x="46" y="99" width="26" height="24" rx="6"/><text class="h-lvlt" x="59" y="115" text-anchor="middle">W2</text>
+          <text class="h-txt" x="82" y="115">Fritteuse 2 war 25 Min außer Betrieb</text>
+          <rect class="h-okb" x="346" y="102" width="56" height="18" rx="9"/><text class="h-ok" x="374" y="115" text-anchor="middle">✓ belegt</text>
+
+          <rect class="h-node" x="60" y="138" width="350" height="34" rx="9"/>
+          <rect class="h-lvl" x="66" y="143" width="26" height="24" rx="6"/><text class="h-lvlt" x="79" y="159" text-anchor="middle">W3</text>
+          <text class="h-txt" x="102" y="159">Überhitzungsschutz hat abgeschaltet</text>
+          <rect class="h-okb" x="346" y="146" width="56" height="18" rx="9"/><text class="h-ok" x="374" y="159" text-anchor="middle">✓ belegt</text>
+
+          <rect class="h-node" x="80" y="182" width="330" height="34" rx="9"/>
+          <rect class="h-lvl" x="86" y="187" width="26" height="24" rx="6"/><text class="h-lvlt" x="99" y="203" text-anchor="middle">W4</text>
+          <text class="h-txt" x="122" y="203">Fettfilter der Abluft zugesetzt</text>
+          <rect class="h-wab" x="334" y="190" width="68" height="18" rx="9"/><text class="h-wa" x="368" y="203" text-anchor="middle">? vermutet</text>
+
+          <rect class="h-root" x="100" y="226" width="310" height="34" rx="9"/>
+          <rect class="h-rlvl" x="106" y="231" width="26" height="24" rx="6"/><text class="h-rlvlt" x="119" y="247" text-anchor="middle">W5</text>
+          <text class="h-txt" x="142" y="247">Filter in keinem Reinigungsplan</text>
+          <rect class="h-rlvl" x="322" y="234" width="80" height="18" rx="9"/><text class="h-rt" x="362" y="247" text-anchor="middle">◎ Grundursache</text>
+          <text class="h-sm" x="210" y="286" text-anchor="middle">Problem · Warum-Kette mit Belegen · Grundursache</text>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- GRUNDIDEE -->
+  <section id="grundidee">
+    <div class="wrap">
+      <span class="eyebrow">01 · Grundidee</span>
+      <div class="two-col">
+        <div>
+          <h2>Nicht beim ersten Symptom stehen bleiben</h2>
+          <p>Die <strong>5-Warum-Methode</strong> (5 Why) stammt aus dem Toyota-Produktionssystem und wurde von <strong>Taiichi Ohno</strong> bekannt gemacht. Ausgehend von einem Problem fragt man wiederholt „Warum?“ – jede Antwort ist die Ursache der vorherigen Ebene –, bis man bei der <strong>Grundursache</strong> ankommt: der Ursache, deren Beseitigung das Problem dauerhaft verhindert.</p>
+          <p>Die Zahl fünf ist ein <strong>Richtwert</strong>. Manchmal genügen drei Fragen, manchmal braucht es mehr. Entscheidend ist, nicht bei der ersten, naheliegenden Antwort aufzuhören – und jede Antwort mit <strong>Fakten zu belegen</strong>, statt auf Vermutungen weiterzubauen.</p>
+          <blockquote>
+            „Durch fünfmaliges Wiederholen von ‚Warum?‘ werden Wesen des Problems und seine Lösung klar.“
+            <footer>— sinngemäß nach Taiichi Ohno</footer>
+          </blockquote>
+        </div>
+        <div>
+          <h3 style="margin-bottom:14px">Die wichtigsten Begriffe</h3>
+          <dl class="terms">
+            <div><dt>Symptom</dt><dd>Das, was sichtbar schiefgeht – der Ausgangspunkt der Analyse, nicht ihr Ziel.</dd></div>
+            <div><dt>Warum-Kette</dt><dd>Die Folge von Antworten W1, W2, W3 … – jede erklärt die Ebene darüber.</dd></div>
+            <div><dt>Beleg</dt><dd>Daten, Beobachtung, Foto oder Dokument, das eine Antwort stützt. Antworten sind <em>belegt</em>, <em>vermutet</em> oder <em>widerlegt</em>.</dd></div>
+            <div><dt>Grundursache</dt><dd>Eine abstellbare Ursache im eigenen Einfluss – meist ein Prozess, eine Regel oder ein Plan, nie eine Person.</dd></div>
+            <div><dt>Daher-Probe</dt><dd>Die Kette rückwärts gelesen: „… daher … daher …“. Klingt ein Schritt nicht schlüssig, fehlt eine Ebene.</dd></div>
+            <div><dt>Gemba</dt><dd>Japanisch für „der tatsächliche Ort“: dorthin gehen, wo das Problem auftritt, und die Beteiligten fragen.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABLAUF -->
+  <section id="ablauf">
+    <div class="wrap">
+      <span class="eyebrow">02 · Vorgehen</span>
+      <h2>In fünf Schritten zur wirksamen Maßnahme</h2>
+      <p class="lead">Die App führt dich durch genau diese Phasen. Auf der Übersicht siehst du je Analyse, wie weit sie ist: Problem → Warum → Ursache → Maßnahmen → Wirksamkeit.</p>
+      <ol class="steps">
+        <li><div><h3>Problem beschreiben</h3><p>Was genau ist passiert – wo, wann, wie oft? Messbar mit Soll und Ist, ohne Ursache und ohne Lösung. Dazu Fakten und Belege sammeln.</p><p class="tip"><b>In der App:</b> Felder nach 5W2H, daraus ein Vorschlag für die Problemaussage – mit Prüfung.</p></div></li>
+        <li><div><h3>Warum? fragen</h3><p>Fünfmal – oder so oft wie nötig – „Warum?“ fragen. Jede Antwort belegen; vermutete Antworten erst prüfen, dann weiterfragen. Mehrere Antworten auf eine Frage bilden Zweige.</p><p class="tip"><b>In der App:</b> Ansichten Kette und Baum, optional vorher Ishikawa für die Breite.</p></div></li>
+        <li><div><h3>Grundursache markieren</h3><p>Aufhören, wo eine abstellbare Ursache im eigenen Einfluss liegt. Mit der Daher-Probe die Kette rückwärts gegenlesen.</p><p class="tip"><b>In der App:</b> „◎ Als Grundursache markieren“ und die Prüfung der Kette.</p></div></li>
+        <li><div><h3>Maßnahmen festlegen</h3><p>Sofort das Symptom eindämmen, dann jede Grundursache abstellen und vorbeugen – möglichst mit starken Maßnahmen und einem Prüfkriterium.</p><p class="tip"><b>In der App:</b> Maßnahmen je Grundursache mit Stärke, Prüfkriterium und Status.</p></div></li>
+        <li><div><h3>Wirksamkeit prüfen</h3><p>Nach festgelegter Zeit nachsehen: Ist das Problem wirklich verschwunden? Wirkt eine Maßnahme nicht, war die Analyse noch nicht fertig.</p><p class="tip"><b>In der App:</b> Status „wirksam“ / „wirkt nicht“ und ein Bericht auf einer Seite.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="wrap">
+      <span class="eyebrow">03 · Schritt 1</span>
+      <h2>Das Problem beschreiben – nur Fakten</h2>
+      <p class="lead">Eine unklare Problembeschreibung führt zu einer unklaren Analyse. Beschreibe, <em>was</em> passiert ist – nicht, warum, und nicht, was man tun sollte. Die Fragen nach 5W2H helfen dabei.</p>
+
+      <div class="w2h">
+        <div><b>Was?</b><span>Was ist passiert?</span><em>Lange Wartezeit an der Ausgabe</em></div>
+        <div><b>Wo?</b><span>Ort, Anlage, Prozess</span><em>Food-Truck, Domplatz</em></div>
+        <div><b>Wann?</b><span>Zeitpunkt, seit wann</span><em>Sa, 4.10., 18:30–19:15</em></div>
+        <div><b>Wie viel?</b><span>Soll und Ist</span><em>Soll ≤ 10 Min · Ist bis 40 Min</em></div>
+        <div><b>Wer?</b><span>Wer ist betroffen?</span><em>Gäste, Ausgabe-Team</em></div>
+        <div><b>Wie entdeckt?</b><span>Woran fiel es auf?</span><em>Beschwerden, Kassenlog</em></div>
+        <div><b>Auswirkung</b><span>Folgen, Kosten</span><em>12 Gäste gegangen, ≈ 180 €</em></div>
+        <div><b>Fakten</b><span>Belege für die Beschreibung</span><em>61 Bons, Foto vom Display</em></div>
+      </div>
+
+      <div class="statement"><small>Problemaussage</small>Am Samstag, 4.10., warteten Gäste am Food-Truck am Domplatz zwischen 18:30 und 19:15 bis zu 40 Min statt höchstens 10 Min auf ihr Essen; 12 Gäste gingen ohne Bestellung.</div>
+
+      <div class="two-col" style="margin-top:36px">
+        <div>
+          <h3>Die Prüfung der Problemaussage</h3>
+          <p class="muted">Die App prüft fünf Punkte und merkt Wortfunde direkt am Feld an. Wortprüfungen sind Hinweise, keine Urteile – du entscheidest.</p>
+          <ul class="hints">
+            <li class="ok"><span class="sym">✓</span><span><b>Konkret:</b> Ort und Zeitraum genannt.</span></li>
+            <li class="ok"><span class="sym">✓</span><span><b>Messbar:</b> Soll und Ist mit Zahlen.</span></li>
+            <li class="ok"><span class="sym">✓</span><span><b>Ohne Ursache:</b> kein „weil“, „wegen“, „aufgrund“ …</span></li>
+            <li class="ok"><span class="sym">✓</span><span><b>Ohne Lösung:</b> kein „müssen“, „einführen“, „fehlt“ …</span></li>
+            <li class="ok"><span class="sym">✓</span><span><b>Belegt:</b> Fakten und Belege erfasst.</span></li>
+          </ul>
+          <p class="muted" style="margin-top:16px;font-size:.92rem">Tipp: Die Leute fragen, die den Prozess täglich machen – und an den Ort des Geschehens gehen (Gemba).</p>
+        </div>
+        <div class="vs">
+          <div class="no"><span>✕</span><span>Die Küche ist zu langsam, weil Personal fehlt.<small>Enthält Ursache („weil“) und Lösung („fehlt“) – die Analyse ist schon entschieden.</small></span></div>
+          <div class="no"><span>✕</span><span>Am Wochenende dauert es oft zu lange.<small>Wo? Wann genau? Wie lange statt wie lange sollte es dauern?</small></span></div>
+          <div class="yes"><span>✓</span><span>Am Samstag, 4.10., 18:30–19:15, warteten Gäste am Domplatz bis zu 40 Min statt ≤ 10 Min.<small>Konkret, messbar, ohne Ursache, ohne Lösung.</small></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KETTE -->
+  <section id="kette">
+    <div class="wrap">
+      <span class="eyebrow">04 · Schritt 2 und 3</span>
+      <h2>Die Warum-Kette – belegt, verzweigt, schlüssig</h2>
+      <p class="lead">Jede Antwort ist eine Ursache der Ebene darüber. Vermutete Antworten sind ein Auftrag, nachzusehen – nicht, darauf weiterzubauen. Widerlegte Antworten bleiben sichtbar: Sie dokumentieren, was geprüft wurde.</p>
+
+      <div class="two-col" style="margin-top:28px">
+        <div class="chain" aria-label="Beispiel einer Warum-Kette">
+          <div class="node root">
+            <div class="lvl">W5</div>
+            <div><p class="q">Warum war der Filter zugesetzt?</p><p class="a">Die Filterreinigung steht in keinem Reinigungsplan – nur die Fritteuse selbst.</p><p class="ev">Reinigungsplan Küche, Stand März <span class="pill ok">✓ belegt</span> <span class="pill root">◎ Grundursache</span></p></div>
+          </div>
+          <div class="node">
+            <div class="lvl">W4</div>
+            <div><p class="q">Warum hat der Schutz abgeschaltet?</p><p class="a">Der Fettfilter der Abluft war zugesetzt – die Wärme staute sich.</p><p class="ev">Filter sah stark verschmutzt aus <span class="pill warn">? vermutet</span></p></div>
+          </div>
+          <div class="node">
+            <div class="lvl">W3</div>
+            <div><p class="q">Warum war Fritteuse 2 außer Betrieb?</p><p class="a">Der Überhitzungsschutz hat abgeschaltet.</p><p class="ev">Fehlercode E3, Handbuch S. 14 <span class="pill ok">✓ belegt</span></p></div>
+          </div>
+          <div class="branch">
+            <p>3 Antworten auf „Warum kam die Küche nicht hinterher?“</p>
+            <div class="chips">
+              <span class="chip on">W2 · Fritteuse 2 außer Betrieb ✓</span>
+              <span class="chip off">Mehr Bestellungen als üblich ✕</span>
+              <span class="chip">Nur eine Person in der Küche ✓</span>
+            </div>
+          </div>
+          <div class="node">
+            <div class="lvl">W1</div>
+            <div><p class="q">Warum ist das passiert?</p><p class="a">Die Küche kam mit den Pommes nicht hinterher.</p><p class="ev">Ø 28 Min bis „Pommes fertig“ (Küchenmonitor) <span class="pill ok">✓ belegt</span></p></div>
+          </div>
+          <div class="node problem">
+            <div class="lvl">⚑</div>
+            <div><p class="q">Problem</p><p class="a">Gäste warteten bis zu 40 Min statt höchstens 10 Min.</p></div>
+          </div>
+        </div>
+        <div>
+          <h3>So liest du das Beispiel</h3>
+          <p class="muted">Von unten nach oben wird gefragt, von oben nach unten gelesen. Auf W1 gibt es drei Antworten – eine <strong>Verzweigung</strong>. „Mehr Bestellungen“ ist mit dem Kassenlog <strong>widerlegt</strong> (61 Bons, sonst 64): Unter dieser Antwort wird nicht weitergefragt. Der Zweig „Nur eine Person“ ist eine eigene Kette mit eigener Grundursache.</p>
+          <p class="muted">W4 ist nur <strong>vermutet</strong> – die App meldet: „W4 ist nur vermutet – erst belegen, dann weiterfragen.“ Ein Blick auf den Gerätespeicher oder eine Temperaturmessung macht daraus einen Beleg.</p>
+          <h3 style="margin-top:24px">Die Daher-Probe</h3>
+          <div class="readback">Filterreinigung steht in keinem Plan <b>→ daher</b> Fettfilter zugesetzt <b>→ daher</b> Überhitzungsschutz schaltet ab <b>→ daher</b> Fritteuse 2 außer Betrieb <b>→ daher</b> Küche kommt nicht hinterher <b>→ daher</b> Gäste warten 40 Min.</div>
+          <p class="muted" style="margin-top:12px;font-size:.92rem">Folgt jede Ebene aus der nächsten? Dann bestätigst du in der App „Ursache → Wirkung“. Klingt ein „daher“ holprig, fehlt eine Ebene oder die Antwort stimmt nicht.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:44px">Wann ist die Grundursache erreicht?</h3>
+      <div class="grid-3" style="margin-top:16px">
+        <div class="card">
+          <div class="icon">◎</div>
+          <h3>Abstellbar</h3>
+          <p class="muted">Ihre Beseitigung verhindert, dass das Problem wieder auftritt. Ein weiteres „Warum?“ bringt keine neue, sinnvolle Ursache mehr.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⌂</div>
+          <h3>Im eigenen Einfluss</h3>
+          <p class="muted">Nicht bei Wetter, Kunden oder Lieferanten stehen bleiben – die App merkt solche Wörter an. Frage weiter: Was können <em>wir</em> daran ändern?</p>
+        </div>
+        <div class="card">
+          <div class="icon">⚙</div>
+          <h3>Ein Prozess, keine Person</h3>
+          <p class="muted">„Jonas hat vergessen …“ ist keine Grundursache. Frage: Warum konnte das passieren? Meist fehlt eine Regel, ein Plan oder eine Absicherung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WERKSTATT -->
+  <section id="werkstatt">
+    <div class="wrap">
+      <span class="eyebrow">05 · Interaktives Beispiel</span>
+      <div class="demo-head">
+        <div>
+          <h2>Ketten-Werkstatt: Prüf deine eigene Analyse</h2>
+          <p class="lead" style="margin:0">Beschreibe ein Problem und frag „Warum?“ – oder lade ein Beispiel. Die Prüfungen rechnen mit denselben Regeln und Wortlisten wie die App.</p>
+        </div>
+        <div class="demo-tools">
+          <button class="btn btn-ghost" id="goodBtn" type="button">✓ Gute Analyse</button>
+          <button class="btn btn-ghost" id="weakBtn" type="button">✕ Schwache Analyse</button>
+          <button class="btn btn-ghost" id="clearBtn" type="button">Leeren</button>
+        </div>
+      </div>
+
+      <div class="demo-out">
+        <div class="card">
+          <form class="form" id="whyForm" autocomplete="off" onsubmit="return false">
+            <p class="form-title"><span class="num">1</span>Problem beschreiben</p>
+            <div class="field"><label for="pWhat">Was? <small>– was ist passiert?</small></label><input type="text" id="pWhat"></div>
+            <div class="row-2">
+              <div class="field"><label for="pWhere">Wo?</label><input type="text" id="pWhere"></div>
+              <div class="field"><label for="pWhen">Wann?</label><input type="text" id="pWhen"></div>
+            </div>
+            <div class="row-2">
+              <div class="field"><label for="pTarget">Soll</label><input type="text" id="pTarget"></div>
+              <div class="field"><label for="pActual">Ist</label><input type="text" id="pActual"></div>
+            </div>
+            <div class="field"><label for="pFacts">Fakten &amp; Belege <small>– einer pro Zeile</small></label><textarea id="pFacts"></textarea></div>
+            <hr class="divider">
+            <p class="form-title"><span class="num">2</span>Warum? fragen <small>(ein Zweig)</small></p>
+            <div class="why-head" aria-hidden="true"><span>Ebene</span><span>Antwort</span><span>Belegt?</span><span>◎</span></div>
+            <div class="whys" id="whys"></div>
+            <div class="row-tools">
+              <button class="btn btn-ghost btn-sm" id="addWhy" type="button">+ Warum?</button>
+              <button class="btn btn-ghost btn-sm" id="removeWhy" type="button">Letzte Ebene entfernen</button>
+            </div>
+            <hr class="divider">
+            <p class="form-title"><span class="num">3</span>Selbst bestätigen</p>
+            <label class="check-line"><input type="checkbox" id="cCausal"> <span>Daher-Probe schlüssig: Jede Ebene folgt aus der nächsten.</span></label>
+            <label class="check-line"><input type="checkbox" id="cControl"> <span>Die Grundursache liegt in unserem Einfluss.</span></label>
+          </form>
+        </div>
+        <div class="card">
+          <div class="out-block">
+            <h3>Prüfung der Problemaussage <small id="probScore"></small></h3>
+            <div class="preview-statement" id="statement"></div>
+            <ul class="hints" id="probHints"></ul>
+          </div>
+          <div class="out-block">
+            <h3>Qualität der Kette <small id="chainScore"></small></h3>
+            <ul class="hints" id="chainHints"></ul>
+          </div>
+          <div class="out-block">
+            <h3>Daher-Probe</h3>
+            <div class="readback" id="readback"></div>
+          </div>
+          <div class="status info" id="verdict"></div>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:16px;font-size:.9rem">Vereinfacht: Die Werkstatt zeigt einen einzigen Zweig. In der App kannst du auf jede Frage mehrere Antworten geben, widerlegte Antworten als eigenen Zweig stehen lassen und zusätzlich Belege, Team-Namen (für die Prüfung auf Schuldzuweisung) und Blickwinkel erfassen.</p>
+    </div>
+  </section>
+
+  <!-- BLICKWINKEL & ISHIKAWA -->
+  <section id="blickwinkel">
+    <div class="wrap">
+      <span class="eyebrow">06 · Erweiterungen</span>
+      <h2>Drei Blickwinkel und das Ishikawa-Diagramm</h2>
+      <p class="lead">Beides ist in der App optional und je Analyse unter „Datei → Einstellungen der Analyse“ einschaltbar. Für kleine Probleme reicht eine Kette – bei wichtigen lohnt der zweite Blick.</p>
+
+      <h3 style="margin-top:32px">3 × 5 Warum</h3>
+      <div class="grid-3" style="margin-top:16px">
+        <div class="card lens" style="--lc:var(--lens-1)">
+          <h3>Warum aufgetreten?</h3>
+          <p class="muted" style="font-size:.9rem">Technische bzw. ablaufbedingte Ursache – die eigentliche Warum-Kette, immer an.</p>
+          <div class="ex"><b>Grundursache im Beispiel</b>Filterreinigung steht in keinem Reinigungsplan.</div>
+        </div>
+        <div class="card lens" style="--lc:var(--lens-2)">
+          <h3>Warum nicht entdeckt?</h3>
+          <p class="muted" style="font-size:.9rem">Warum fiel das Problem nicht früher auf? Führt zu Prüf- und Erkennungsmaßnahmen.</p>
+          <div class="ex"><b>Grundursache im Beispiel</b>Beim Öffnen des Trucks gibt es keine Prüfliste.</div>
+        </div>
+        <div class="card lens" style="--lc:var(--lens-3)">
+          <h3>Warum im System möglich?</h3>
+          <p class="muted" style="font-size:.9rem">Welche Regel, Planung oder Organisation ließ es zu? Führt zu Verbesserungen im System.</p>
+          <div class="ex"><b>Ansatz im Beispiel</b>Beim Kauf von Fritteuse 2 wurde der Reinigungsplan nicht angepasst.</div>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top:48px">
+        <div>
+          <h3>Ishikawa: Breite vor Tiefe</h3>
+          <p class="muted">Das Ishikawa- oder Fischgräten-Diagramm sammelt <strong>mögliche</strong> Ursachen einer Wirkung nach Kategorien, damit nichts übersehen wird. Jede Ursache ist <em>belegt</em>, <em>offen</em> oder <em>ausgeschlossen</em>. Die belegten übernimmst du als Zweig in die Warum-Analyse und verfolgst sie mit „Warum?“ in die Tiefe.</p>
+          <p class="muted">Ein Diagramm ist für das Problem oder für jede beliebige Antwort möglich.</p>
+        </div>
+        <div>
+          <h3>Vorlagen für Kategorien</h3>
+          <div class="presets">
+            <div><b>6M</b><span>Mensch, Maschine, Methode, Material, Milieu, Messung – Produktion und Technik</span></div>
+            <div><b>8M</b><span>6M plus Management und Money</span></div>
+            <div><b>4P</b><span>Personal, Prozesse, Platz, Produkt – Dienstleistungen</span></div>
+            <div><b>Eigene</b><span>Kategorien umbenennen, ergänzen oder entfernen</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:28px">
+        <div class="fish-box" aria-label="Ishikawa-Diagramm zum Beispiel">
+            <svg viewBox="0 0 640 330" role="img">
+              <style>
+                .f-spine { stroke: var(--spine); stroke-width: 3; fill: none; }
+                .f-bone { stroke: var(--muted); stroke-width: 1.5; fill: none; }
+                .f-cat { font: 700 13px Inter, sans-serif; fill: var(--accent); }
+                .f-c { font: 500 11px Inter, sans-serif; fill: var(--text); }
+                .f-ok { font: 700 11px Inter, sans-serif; fill: var(--ok); }
+                .f-op { font: 700 11px Inter, sans-serif; fill: var(--warn); }
+                .f-ex { font: 700 11px Inter, sans-serif; fill: var(--bad); }
+                .f-xt { font: 500 11px Inter, sans-serif; fill: var(--muted); text-decoration: line-through; }
+                .f-head { fill: var(--root-soft); stroke: var(--root-line); }
+                .f-ht { font: 700 12px Inter, sans-serif; fill: var(--text); }
+              </style>
+              <path class="f-spine" d="M10 165H500"/>
+              <rect class="f-head" x="502" y="130" width="130" height="70" rx="10"/>
+              <text class="f-ht" x="567" y="160" text-anchor="middle">Küche kam nicht</text>
+              <text class="f-ht" x="567" y="176" text-anchor="middle">hinterher</text>
+              <!-- top bones -->
+              <path class="f-bone" d="M60 30L120 165M220 30L280 165M380 30L440 165"/>
+              <text class="f-cat" x="56" y="22">Mensch</text>
+              <text class="f-cat" x="216" y="22">Maschine</text>
+              <text class="f-cat" x="376" y="22">Methode</text>
+              <text class="f-ok" x="80" y="62">✓</text><text class="f-c" x="94" y="62">Nur eine Person</text>
+              <text class="f-ex" x="94" y="90">✕</text><text class="f-xt" x="108" y="90">Aushilfe ungeübt</text>
+              <text class="f-op" x="104" y="118">?</text><text class="f-c" x="116" y="118">Hektik</text>
+              <text class="f-ok" x="240" y="62">✓</text><text class="f-c" x="254" y="62">Fritteuse 2 überhitzt</text>
+              <text class="f-ex" x="254" y="90">✕</text><text class="f-xt" x="268" y="90">Kasse langsam</text>
+              <text class="f-op" x="264" y="118">?</text><text class="f-c" x="276" y="118">Abluft schwach</text>
+              <text class="f-op" x="400" y="62">?</text><text class="f-c" x="412" y="62">Bons unsortiert</text>
+              <text class="f-op" x="414" y="90">?</text><text class="f-c" x="426" y="90">Kein Vertretungsplan</text>
+              <!-- bottom bones -->
+              <path class="f-bone" d="M60 300L120 165M220 300L280 165M380 300L440 165"/>
+              <text class="f-cat" x="56" y="318">Material</text>
+              <text class="f-cat" x="216" y="318">Milieu</text>
+              <text class="f-cat" x="376" y="318">Messung</text>
+              <text class="f-op" x="104" y="216">?</text><text class="f-c" x="116" y="216">Öl 6 Tage alt</text>
+              <text class="f-ex" x="90" y="246">✕</text><text class="f-xt" x="104" y="246">Pommes tiefgekühlt</text>
+              <text class="f-ex" x="264" y="216">✕</text><text class="f-xt" x="278" y="216">Mehr Bestellungen</text>
+              <text class="f-op" x="250" y="246">?</text><text class="f-c" x="262" y="246">34 °C im Truck</text>
+              <text class="f-ok" x="424" y="216">✓</text><text class="f-c" x="438" y="216">Öltemperatur nicht abgelesen</text>
+              <text class="f-op" x="410" y="246">?</text><text class="f-c" x="422" y="246">Keine Wartezeit-Anzeige</text>
+            </svg>
+          </div>
+          <p class="scroll-hint">← Diagramm seitlich wischen →</p>
+          <p class="muted" style="margin-top:10px;font-size:.88rem"><span style="color:var(--ok);font-weight:700">✓ belegt</span> · <span style="color:var(--warn);font-weight:700">? offen</span> · <span style="color:var(--bad);font-weight:700">✕ ausgeschlossen</span> – erst prüfen und belegen, dann als Zweig weiterfragen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MASSNAHMEN -->
+  <section id="massnahmen">
+    <div class="wrap">
+      <span class="eyebrow">07 · Schritt 4 und 5</span>
+      <h2>Maßnahmen, die wirklich wirken</h2>
+      <p class="lead">Eine Analyse ist erst fertig, wenn das Problem verschwunden ist. Dafür braucht es Maßnahmen gegen das Symptom <em>und</em> gegen jede Grundursache – und eine Prüfung ihrer Wirkung.</p>
+
+      <div class="grid-3" style="margin-top:28px">
+        <div class="card kind">
+          <div class="icon">⚡</div>
+          <h3>Sofort</h3>
+          <p class="muted">Symptom eindämmen, Schaden begrenzen – noch ohne die Ursache zu kennen.</p>
+          <div class="ex">Filter gereinigt, Fritteuse 2 wieder in Betrieb.</div>
+        </div>
+        <div class="card kind">
+          <div class="icon">◎</div>
+          <h3>Abstellen</h3>
+          <p class="muted">Die Grundursache beseitigen. Jede markierte Grundursache braucht mindestens eine solche Maßnahme.</p>
+          <div class="ex">Fettfilter wöchentlich in den Reinigungsplan aufnehmen.</div>
+        </div>
+        <div class="card kind">
+          <div class="icon">⛨</div>
+          <h3>Vorbeugen</h3>
+          <p class="muted">Wiederauftreten verhindern – auch an ähnlichen Stellen („Übertragen“).</p>
+          <div class="ex">Zweiten Filter als Wechselteil kaufen – tauschen statt reinigen.</div>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top:44px">
+        <div>
+          <h3>Stärke von Maßnahmen</h3>
+          <p class="muted">Von oben nach unten nimmt die Wirkung ab. Steht gegen eine Grundursache nur eine Schulung, warnt die App: „lieber Ablauf oder Technik ändern“.</p>
+          <div class="ladder">
+            <div class="rung" style="--w:100%;--p:100%"><div class="bar">Beseitigen</div><small>Die Gefahr oder den Schritt ganz entfernen.</small></div>
+            <div class="rung" style="--w:88%;--p:78%"><div class="bar">Ersetzen</div><small>Durch etwas ersetzen, das den Fehler nicht zulässt.</small></div>
+            <div class="rung" style="--w:76%;--p:45%"><div class="bar">Technisch absichern</div><small>Sensor, Sperre, Poka-Yoke.</small></div>
+            <div class="rung" style="--w:64%;--p:25%"><div class="bar">Organisatorisch</div><small>Regel, Plan, Checkliste.</small></div>
+            <div class="rung" style="--w:52%;--p:10%"><div class="bar">Schulung / Hinweis</div><small>Wirkt nur, solange sich alle erinnern.</small></div>
+          </div>
+        </div>
+        <div>
+          <h3>Wirksamkeit messbar machen</h3>
+          <p class="muted">Jede Maßnahme braucht ein <strong>Prüfkriterium</strong> („Wirksam, wenn …“) und ein Prüfdatum. Erst wenn sie geprüft ist, wird ihr Status von <em>umgesetzt</em> zu <em>wirksam</em> – oder zu <em>wirkt nicht</em>: dann die Analyse noch einmal prüfen.</p>
+          <div class="vs">
+            <div class="no"><span>✕</span><span>Team zum Thema Überhitzung schulen.<small>Nur Schulung, kein Prüfkriterium.</small></span></div>
+            <div class="yes"><span>✓</span><span>Filter wöchentlich im Reinigungsplan.<small>Wirksam, wenn 4 Wochen kein Abschalten durch Überhitzung – prüfen am 3.11.</small></span></div>
+          </div>
+          <h3 style="margin-top:28px">Der Maßnahmen-Check der App</h3>
+          <ul class="checklist">
+            <li>Symptom eingedämmt (Sofortmaßnahme umgesetzt)</li>
+            <li>Jede Grundursache abgestellt</li>
+            <li>Wirksamkeit messbar (Prüfkriterium je Maßnahme)</li>
+            <li>Starke Maßnahmen, nicht nur Schulungen</li>
+            <li>Alle Maßnahmen wirksam geprüft</li>
+          </ul>
+          <p class="muted" style="margin-top:14px;font-size:.9rem">Person und Termin sind optional. Die App ist bewusst <strong>kein Aufgabenmanagement</strong> – keine Erinnerungen, keine Tickets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRAXIS -->
+  <section id="praxis">
+    <div class="wrap">
+      <span class="eyebrow">08 · Praxistipps</span>
+      <h2>Typische Fehler – und wie du sie vermeidest</h2>
+      <div class="grid-2" style="margin-top:28px">
+        <div class="card dd do">
+          <h3>✓ So gelingt’s</h3>
+          <ul>
+            <li>Im Team analysieren – mit den Leuten, die den Prozess täglich machen.</li>
+            <li>Vor Ort nachsehen (Gemba), statt im Besprechungsraum zu raten.</li>
+            <li>Jede Antwort belegen; Vermutungen als Prüfauftrag behandeln.</li>
+            <li>Mehrere Antworten zulassen – Probleme haben oft mehr als eine Ursache.</li>
+            <li>Die Kette mit der Daher-Probe rückwärts gegenlesen.</li>
+            <li>Gelerntes übertragen: Wo kann das gleiche Problem noch auftreten?</li>
+          </ul>
+        </div>
+        <div class="card dd dont">
+          <h3>✕ Typische Fallen</h3>
+          <ul>
+            <li><b>Schuldige statt Ursachen</b> – „Mitarbeiter hat vergessen“ beendet die Analyse zu früh und vergiftet das Klima.</li>
+            <li><b>Zu früh aufhören</b> – nach zwei Ebenen ist man meist noch beim Symptom.</li>
+            <li><b>Auf Vermutungen bauen</b> – eine falsche Antwort führt die ganze Kette in die Irre.</li>
+            <li><b>Bei äußeren Umständen enden</b> – Wetter, Kunden, Markt lassen sich nicht abstellen.</li>
+            <li><b>Lösung im Problem</b> – „Wir brauchen mehr Personal“ ist keine Problembeschreibung.</li>
+            <li><b>Nur Schulungen</b> – schwache Maßnahmen lassen das Problem wiederkommen.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz">
+    <div class="wrap">
+      <span class="eyebrow">09 · Wissenscheck</span>
+      <h2>Fünf Fragen zum Abschluss</h2>
+      <p class="lead">Teste dein Verständnis. Die Erklärung erscheint nach deiner Antwort.</p>
+      <div class="quiz" id="quizBox"></div>
+      <p class="muted" id="quizScore" style="margin-top:16px"></p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="border-top:0;padding-top:24px">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2 style="margin-bottom:.3em">Jetzt die eigene Analyse starten</h2>
+          <p>Mit der 5-Warum-App beschreibst du Probleme, fragst mit Belegen nach dem „Warum?“, legst wirksame Maßnahmen fest und erstellst einen Bericht auf einer Seite – alles im Browser, ohne Konto. Das Food-Truck-Beispiel ist schon dabei.</p>
+        </div>
+        <a class="btn" href="https://method-commons.github.io/5-why-app/" target="_blank" rel="noopener">App öffnen ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>5 Warum · Kurzschulung · <a href="https://github.com/method-commons/5-why-app" target="_blank" rel="noopener">App auf GitHub</a></span>
+    <span>Methodik nach Taiichi Ohno (Toyota-Produktionssystem) und Kaoru Ishikawa · Beispiele fiktiv</span>
+  </div>
+</footer>
+
+<script>
+  // Theme toggle
+  (function () {
+    const root = document.documentElement;
+    let saved = null;
+    try { saved = localStorage.getItem('5w-theme'); } catch (e) {}
+    if (saved) root.dataset.theme = saved;
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const dark = root.dataset.theme
+        ? root.dataset.theme === 'dark'
+        : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('5w-theme', root.dataset.theme); } catch (e) {}
+    });
+  })();
+
+  // Mobile menu
+  (function () {
+    const nav = document.querySelector('nav.top');
+    const btn = document.getElementById('menuToggle');
+    const set = open => { nav.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); btn.innerHTML = open ? '<span aria-hidden="true">✕</span> <span class="menu-label">Schließen</span>' : '<span aria-hidden="true">☰</span> <span class="menu-label">Menü</span>'; btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen'); };
+    btn.addEventListener('click', () => set(!nav.classList.contains('open')));
+    nav.querySelectorAll('ul a').forEach(a => a.addEventListener('click', () => set(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+  })();
+
+  // Ketten-Werkstatt – Regeln und Wortlisten wie in der App (js/checks.js, js/i18n/de.js)
+  const WORDS = {
+    cause: ['weil', 'wegen', 'aufgrund', 'verursacht*', 'ursache*', 'deshalb', 'daher'],
+    solution: ['sollte*', 'müssen', 'muss', 'einführen', 'einzuführen', 'fehlt', 'fehlen', 'fehlende*', 'mangel an', 'brauchen', 'benötigen', 'umstellen'],
+    blame: ['mitarbeiter*', 'kollege*', 'kollegin*', 'vergessen', 'vergaß', 'vergass', 'nicht aufgepasst', 'unachtsam*', 'unaufmerksam*', 'nachlässig*', 'schlampig*', 'faul', 'schuld*', 'menschliches versagen', 'hat nicht', 'hätte', 'hatte keine lust', 'unfähig*', 'inkompetent*'],
+    external: ['wetter', 'kunde', 'kunden', 'lieferant*', 'gesetz*', 'zufall', 'pech', 'konkurrenz', 'regierung', 'schicksal', 'höhere gewalt', 'markt']
+  };
+  const MIN_DEPTH = 3; // Blickwinkel „Warum aufgetreten?“
+  const MAX_LEVELS = 7;
+
+  const fold = s => String(s || '').replace(/ß/g, 'ss').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  function findWord(text, words) {
+    const t = fold(text);
+    if (!t) return null;
+    for (const w of words) {
+      const prefix = w.endsWith('*');
+      const core = fold(prefix ? w.slice(0, -1) : w).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const re = new RegExp('(^|[^\\p{L}\\p{N}])' + core + (prefix ? '' : '(?![\\p{L}\\p{N}])'), 'u');
+      if (re.test(t)) return prefix ? w.slice(0, -1) : w;
+    }
+    return null;
+  }
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const trimEnd = s => s.trim().replace(/[.;,]+$/, '');
+
+  const $ = id => document.getElementById(id);
+  const P = { what: $('pWhat'), where: $('pWhere'), when: $('pWhen'), target: $('pTarget'), actual: $('pActual') };
+  const PROBLEM_LABELS = { what: 'Was?', where: 'Wo?', when: 'Wann?', target: 'Soll', actual: 'Ist' };
+  const STATES = { confirmed: '✓ belegt', assumed: '? vermutet', refuted: '✕ widerlegt' };
+  let rows = [];
+  let rootIndex = -1;
+
+  function renderRows() {
+    $('whys').innerHTML = rows.map((r, i) =>
+      '<div class="why-row' + (i === rootIndex ? ' is-root' : '') + '">'
+      + '<div class="lvl">W' + (i + 1) + '</div>'
+      + '<input type="text" data-i="' + i + '" data-k="text" aria-label="Antwort W' + (i + 1) + '" placeholder="' + (i ? 'Warum: „' + esc(trimEnd(rows[i - 1].text) || '…') + '“?' : 'Warum ist das passiert?') + '" value="' + esc(r.text) + '">'
+      + '<select data-i="' + i + '" data-k="state" aria-label="Belegt? W' + (i + 1) + '">'
+      + Object.keys(STATES).map(k => '<option value="' + k + '"' + (r.state === k ? ' selected' : '') + '>' + STATES[k] + '</option>').join('')
+      + '</select>'
+      + '<label class="rootpick" title="Als Grundursache markieren"><input type="radio" name="root" data-i="' + i + '"' + (i === rootIndex ? ' checked' : '') + ' aria-label="W' + (i + 1) + ' als Grundursache markieren"></label>'
+      + '</div>').join('');
+    $('addWhy').disabled = rows.length >= MAX_LEVELS;
+    $('removeWhy').disabled = rows.length <= 1;
+  }
+
+  $('whys').addEventListener('input', e => {
+    const el = e.target;
+    const i = +el.dataset.i;
+    if (el.dataset.k === 'text') {
+      rows[i].text = el.value;
+      const next = $('whys').querySelector('input[data-i="' + (i + 1) + '"][data-k="text"]');
+      if (next) next.placeholder = 'Warum: „' + (trimEnd(el.value) || '…') + '“?';
+    }
+    render();
+  });
+  $('whys').addEventListener('change', e => {
+    const el = e.target;
+    const i = +el.dataset.i;
+    if (el.dataset.k === 'state') rows[i].state = el.value;
+    if (el.type === 'radio') { rootIndex = i; renderRows(); }
+    render();
+  });
+  $('addWhy').addEventListener('click', () => {
+    if (rows.length >= MAX_LEVELS) return;
+    rows.push({ text: '', state: 'assumed' });
+    renderRows(); render();
+    $('whys').querySelector('input[data-i="' + (rows.length - 1) + '"][data-k="text"]').focus();
+  });
+  $('removeWhy').addEventListener('click', () => {
+    if (rows.length <= 1) return;
+    rows.pop();
+    if (rootIndex >= rows.length) rootIndex = -1;
+    renderRows(); render();
+  });
+
+  function readProblem() {
+    const p = {};
+    for (const k in P) p[k] = P[k].value;
+    p.facts = $('pFacts').value.split('\n').map(x => x.trim()).filter(Boolean);
+    return p;
+  }
+
+  // wie Model.suggestStatement
+  function suggestStatement(p) {
+    const parts = [];
+    const head = [trimEnd(p.what), trimEnd(p.where), trimEnd(p.when)].filter(Boolean).join(' – ');
+    if (head) parts.push(head);
+    const target = trimEnd(p.target), actual = trimEnd(p.actual);
+    if (actual && target) parts.push('Ist: ' + actual + ' (Soll: ' + target + ')');
+    else if (actual) parts.push('Ist: ' + actual);
+    else if (target) parts.push('Soll: ' + target);
+    return parts.length ? parts.join('. ') + '.' : '';
+  }
+
+  // wie Checks.problem
+  function checkProblem(p) {
+    const filled = k => p[k].trim() !== '';
+    const keys = Object.keys(P);
+    if (!keys.some(filled) && !p.facts.length) {
+      return [
+        ['open', 'Konkret', 'Ort und Zeitraum nennen'],
+        ['open', 'Messbar', 'Soll und Ist mit Zahlen'],
+        ['open', 'Ohne Ursache', 'nur beschreiben, nicht erklären'],
+        ['open', 'Ohne Lösung', 'keine Lösung vorwegnehmen'],
+        ['open', 'Belegt', 'Fakten und Belege sammeln']
+      ];
+    }
+    const out = [];
+    const place = filled('where'), time = filled('when');
+    out.push([place && time ? 'ok' : place || time ? 'warn' : 'bad', 'Konkret',
+      place && time ? 'Ort und Zeitraum genannt' : !place && !time ? 'Wo und wann ist es passiert?' : place ? 'Wann ist es passiert?' : 'Wo ist es passiert?']);
+    const digit = s => /\d/.test(s);
+    const both = filled('target') && filled('actual');
+    if (!filled('target') && !filled('actual')) out.push(['bad', 'Messbar', 'Soll und Ist fehlen']);
+    else if (both && digit(p.target) && digit(p.actual)) out.push(['ok', 'Messbar', 'Soll und Ist mit Zahlen']);
+    else out.push(['warn', 'Messbar', !both ? 'Soll und Ist angeben' : 'Soll und Ist möglichst mit Zahlen']);
+    const scan = words => {
+      for (const k of keys) { const w = findWord(p[k], words); if (w) return '„' + w + '“ in „' + PROBLEM_LABELS[k] + '“'; }
+      return null;
+    };
+    const cause = scan(WORDS.cause);
+    out.push(cause ? ['warn', 'Ohne Ursache', cause + ' – hier nur beschreiben, was passiert ist'] : ['ok', 'Ohne Ursache', 'keine Ursache vorweggenommen']);
+    const solution = scan(WORDS.solution);
+    out.push(solution ? ['warn', 'Ohne Lösung', solution + ' – hier nur das Problem beschreiben'] : ['ok', 'Ohne Lösung', 'keine Maßnahme vorweggenommen']);
+    out.push(p.facts.length ? ['ok', 'Belegt', p.facts.length + (p.facts.length === 1 ? ' Fakt erfasst' : ' Fakten erfasst')] : ['warn', 'Belegt', 'Noch keine Fakten oder Belege']);
+    return out;
+  }
+
+  // wie Checks.chain – vereinfacht auf einen Zweig
+  function checkChain() {
+    const label = i => 'W' + (i + 1);
+    const nodes = rows.map((r, i) => ({ ...r, i })).filter(n => n.text.trim());
+    const root = rootIndex >= 0 && rows[rootIndex] && rows[rootIndex].text.trim() ? rootIndex : -1;
+    const causalOk = $('cCausal').checked, controlOk = $('cControl').checked;
+    if (!nodes.length) {
+      return [
+        ['open', 'Grundursache', 'Am Ende der Kette markieren'],
+        ['open', 'Belegt', 'Jede Antwort mit Fakten belegen'],
+        ['open', 'Tief genug', 'So oft fragen wie nötig – oft etwa fünfmal'],
+        ['open', 'Keine Schuldzuweisung', 'Nach Prozessen fragen, nicht nach Personen'],
+        ['open', 'Ursache → Wirkung', 'Kette rückwärts lesen: Folgt jede Ebene aus der nächsten? Dann bestätigen.'],
+        ['open', 'Im eigenen Einfluss', 'Können wir die Grundursache selbst abstellen? Dann bestätigen.']
+      ];
+    }
+    const out = [];
+    out.push(root >= 0 ? ['ok', 'Grundursache', label(root) + ' markiert'] : ['open', 'Grundursache', 'Noch keine Antwort als Grundursache markiert']);
+
+    const relevant = root >= 0 ? nodes.filter(n => n.i <= root) : nodes;
+    const refuted = relevant.filter(n => n.state === 'refuted');
+    const assumed = relevant.filter(n => n.state === 'assumed');
+    const gap = relevant.length && relevant.length < (root >= 0 ? root + 1 : relevant[relevant.length - 1].i + 1);
+    if (refuted.length && (root >= 0 || refuted.some(n => n.i < relevant[relevant.length - 1].i))) {
+      out.push(['bad', 'Belegt', refuted.map(n => label(n.i)).join(', ') + ' ist widerlegt – darunter wird nicht weitergefragt. Eine andere Antwort auf dieselbe Frage suchen.']);
+    } else if (gap) {
+      out.push(['warn', 'Belegt', 'Eine Ebene auf dem Weg ist noch leer.']);
+    } else if (assumed.length) {
+      const l = assumed.map(n => label(n.i)).join(', ');
+      out.push(['warn', 'Belegt', l + (assumed.length === 1 ? ' ist' : ' sind') + ' nur vermutet – erst belegen, dann weiterfragen']);
+    } else out.push(['ok', 'Belegt', 'Alle Antworten auf dem Weg sind belegt']);
+
+    if (root >= 0) {
+      out.push(root + 1 < MIN_DEPTH ? ['warn', 'Tief genug', 'Grundursache schon auf ' + label(root) + ' – noch einmal „Warum?“ fragen?'] : ['ok', 'Tief genug', 'Kette reicht bis Ebene ' + (root + 1)]);
+    } else {
+      const d = nodes[nodes.length - 1].i + 1;
+      out.push(d >= MIN_DEPTH ? ['ok', 'Tief genug', 'Kette reicht bis Ebene ' + d] : ['open', 'Tief genug', 'Erst ' + d + ' Ebene' + (d === 1 ? '' : 'n') + ' – weiterfragen']);
+    }
+
+    const blamed = nodes.map(n => ({ n, w: findWord(n.text, WORDS.blame) })).find(x => x.w);
+    out.push(blamed ? ['warn', 'Keine Schuldzuweisung', label(blamed.n.i) + ': „' + blamed.w + '“ – warum konnte das passieren? Nach dem Prozess fragen, nicht nach Schuldigen.'] : ['ok', 'Keine Schuldzuweisung', 'keine Person als Ursache']);
+
+    out.push(causalOk ? ['ok', 'Ursache → Wirkung', 'Daher-Probe schlüssig (bestätigt)'] : ['open', 'Ursache → Wirkung', 'Kette rückwärts lesen: Folgt jede Ebene aus der nächsten? Dann bestätigen.']);
+
+    const external = root >= 0 ? findWord(rows[root].text, WORDS.external) : null;
+    if (external) out.push(['warn', 'Im eigenen Einfluss', label(root) + ': „' + external + '“ – liegt das in eurem Einfluss? Sonst weiterfragen.']);
+    else out.push(controlOk && root >= 0 ? ['ok', 'Im eigenen Einfluss', 'Grundursache ist abstellbar (bestätigt)'] : ['open', 'Im eigenen Einfluss', 'Können wir die Grundursache selbst abstellen? Dann bestätigen.']);
+    return out;
+  }
+
+  const SYM = { ok: '✓', warn: '?', bad: '✕', open: '–' };
+  const hintList = list => list.map(([s, name, text]) => '<li class="' + s + '"><span class="sym">' + SYM[s] + '</span><span><b>' + name + ':</b> ' + esc(text) + '</span></li>').join('');
+  const scoreText = list => list.filter(x => x[0] === 'ok').length + ' von ' + list.length + ' erfüllt';
+
+  function render() {
+    const p = readProblem();
+    const st = suggestStatement(p);
+    $('statement').innerHTML = st ? esc(st) : '<span class="missing">Fülle die Felder aus – daraus entsteht ein Vorschlag für die Problemaussage.</span>';
+    const pc = checkProblem(p);
+    $('probHints').innerHTML = hintList(pc);
+    $('probScore').textContent = scoreText(pc);
+
+    const cc = checkChain();
+    $('chainHints').innerHTML = hintList(cc);
+    $('chainScore').textContent = scoreText(cc);
+
+    // Daher-Probe: vom Ende des Weges zurück zum Problem
+    const end = rootIndex >= 0 && rows[rootIndex] && rows[rootIndex].text.trim() ? rootIndex : rows.length - 1;
+    const path = rows.slice(0, end + 1).map(r => trimEnd(r.text)).filter(Boolean);
+    const problemText = trimEnd(p.what);
+    if (!path.length) $('readback').innerHTML = '<span class="muted">Sobald die Kette Antworten hat, steht hier die Probe: „… daher …“.</span>';
+    else {
+      const items = path.slice().reverse();
+      if (problemText) items.push(problemText);
+      $('readback').innerHTML = items.map(esc).join(' <b>→ daher</b> ') + '.';
+    }
+
+    const all = pc.concat(cc).map(x => x[0]);
+    const v = $('verdict');
+    const empty = !Object.values(P).some(el => el.value.trim()) && !rows.some(r => r.text.trim());
+    if (empty) { v.className = 'status info'; v.innerHTML = '<b>Noch leer.</b> Fülle die Felder aus oder lade ein Beispiel.'; }
+    else if (all.includes('bad')) { v.className = 'status bad'; v.innerHTML = '<b>Noch Lücken:</b> ' + all.filter(x => x === 'bad').length + ' Prüfpunkt(e) verletzt – erst Problem oder Kette anpassen.'; }
+    else if (all.includes('warn') || all.includes('open')) { v.className = 'status warn'; v.innerHTML = '<b>Fast fertig:</b> ' + all.filter(x => x === 'warn').length + ' Hinweise · ' + all.filter(x => x === 'open').length + ' offen. Hinweise prüfen – du entscheidest.'; }
+    else { v.className = 'status ok'; v.innerHTML = '<b>Tragfähig.</b> Jetzt Maßnahmen gegen Symptom und Grundursache festlegen.'; }
+  }
+
+  function fill(d) {
+    for (const k in P) P[k].value = d.problem[k];
+    $('pFacts').value = d.facts.join('\n');
+    rows = d.rows.map(r => ({ ...r }));
+    rootIndex = d.root;
+    $('cCausal').checked = d.causal;
+    $('cControl').checked = d.control;
+    renderRows();
+    render();
+  }
+
+  const GOOD = {
+    problem: { what: 'Lange Wartezeit an der Ausgabe', where: 'Food-Truck am Wochenmarkt, Domplatz', when: 'Samstag, 4.10., 18:30–19:15', target: 'höchstens 10 Min', actual: 'bis zu 40 Min, 12 Gäste gegangen' },
+    facts: ['Kassenlog: 61 Bons zwischen 18:00 und 19:30 (Ø der letzten 4 Samstage: 64)', 'Fritteuse 2 zeigte 18:35–19:00 „Übertemperatur“ (Foto vom Display)', 'Stornos: 12 bezahlte Bestellungen erstattet'],
+    rows: [
+      { text: 'Die Küche kam mit den Pommes nicht hinterher.', state: 'confirmed' },
+      { text: 'Fritteuse 2 war 25 Minuten außer Betrieb, nur eine lief.', state: 'confirmed' },
+      { text: 'Der Überhitzungsschutz hat abgeschaltet.', state: 'confirmed' },
+      { text: 'Der Fettfilter der Abluft war zugesetzt – die Wärme staute sich.', state: 'confirmed' },
+      { text: 'Die Filterreinigung steht in keinem Reinigungsplan – nur die Fritteuse selbst.', state: 'confirmed' }
+    ],
+    root: 4, causal: true, control: true
+  };
+  const WEAK = {
+    problem: { what: 'Die Küche ist zu langsam, weil Personal fehlt', where: '', when: 'am Wochenende', target: '', actual: 'viel zu lange' },
+    facts: [],
+    rows: [
+      { text: 'Es waren mehr Kunden da als sonst.', state: 'refuted' },
+      { text: 'Der Mitarbeiter hat vergessen, die Fritteuse zu prüfen.', state: 'assumed' }
+    ],
+    root: 1, causal: false, control: false
+  };
+  const EMPTY = {
+    problem: { what: '', where: '', when: '', target: '', actual: '' },
+    facts: [], rows: [{ text: '', state: 'assumed' }], root: -1, causal: false, control: false
+  };
+
+  Object.values(P).forEach(el => el.addEventListener('input', render));
+  $('pFacts').addEventListener('input', render);
+  $('cCausal').addEventListener('change', render);
+  $('cControl').addEventListener('change', render);
+  $('goodBtn').addEventListener('click', () => fill(GOOD));
+  $('weakBtn').addEventListener('click', () => fill(WEAK));
+  $('clearBtn').addEventListener('click', () => fill(EMPTY));
+  fill(WEAK);
+
+  // Quiz
+  const quiz = [
+    { q: 'Welche Problemaussage ist für eine 5-Warum-Analyse geeignet?',
+      a: ['Wir brauchen mehr Personal am Wochenende.', 'Die Küche ist zu langsam, weil die Fritteuse alt ist.', 'Am Sa, 4.10., 18:30–19:15, warteten Gäste am Domplatz bis zu 40 Min statt ≤ 10 Min.'], ok: 2,
+      why: 'Nur die dritte ist konkret (wo, wann) und messbar (Soll/Ist) – ohne vorweggenommene Ursache („weil“) oder Lösung („brauchen“).' },
+    { q: 'Eine Antwort in der Kette ist nur vermutet. Was tust du?',
+      a: ['Weiterfragen – das klärt sich später.', 'Erst belegen (nachsehen, messen, fragen), dann weiterfragen.', 'Die Antwort löschen.'], ok: 1,
+      why: 'Vermutete Antworten sind ein Prüfauftrag. Baut man auf einer falschen Annahme weiter, führt die ganze Kette in die Irre.' },
+    { q: '„Der Mitarbeiter hat vergessen, den Filter zu reinigen.“ Ist das eine Grundursache?',
+      a: ['Ja – damit ist klar, wer verantwortlich ist.', 'Nein – weiterfragen: Warum konnte das passieren?', 'Ja, wenn es belegt ist.'], ok: 1,
+      why: 'Schuldzuweisungen beenden die Analyse zu früh. Die Frage nach dem Prozess führt zur abstellbaren Ursache: Der Filter stand in keinem Reinigungsplan.' },
+    { q: 'Wofür ist die Daher-Probe gut?',
+      a: ['Sie prüft, ob jede Ebene aus der nächsten folgt.', 'Sie zählt, ob es genau fünf Ebenen sind.', 'Sie findet die verantwortliche Person.'], ok: 0,
+      why: 'Rückwärts gelesen („… daher …“) fallen Sprünge und fehlende Ebenen auf. Die Zahl fünf ist nur ein Richtwert.' },
+    { q: 'Gegen eine Grundursache ist nur „Team schulen“ geplant. Was meldet der Maßnahmen-Check?',
+      a: ['Nichts – Schulung ist eine Maßnahme.', 'Dass eine Sofortmaßnahme fehlt.', 'Schwache Maßnahme – lieber Ablauf oder Technik ändern.'], ok: 2,
+      why: 'Schulungen und Hinweise sind die schwächste Stufe. Beseitigen, Ersetzen oder technisch Absichern wirken dauerhaft – unabhängig davon, ob sich alle erinnern.' }
+  ];
+  const quizBox = document.getElementById('quizBox');
+  let score = 0, answered = 0;
+  quiz.forEach((item, i) => {
+    const d = document.createElement('div');
+    d.className = 'qz';
+    d.innerHTML = '<p>' + (i + 1) + '. ' + item.q + '</p><div class="opts"></div><div class="why">' + item.why + '</div>';
+    const opts = d.querySelector('.opts');
+    item.a.forEach((txt, j) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = txt;
+      b.addEventListener('click', () => {
+        opts.querySelectorAll('button').forEach((x, k) => {
+          x.disabled = true;
+          if (k === item.ok) x.classList.add('right');
+        });
+        if (j !== item.ok) b.classList.add('wrong'); else score++;
+        answered++;
+        d.classList.add('done');
+        if (answered === quiz.length) {
+          document.getElementById('quizScore').textContent =
+            score + ' von ' + quiz.length + ' richtig. ' + (score === quiz.length ? 'Stark – du bist bereit für deine erste eigene Analyse!' : 'Schau dir die Abschnitte oben gern noch einmal an.');
+        }
+      });
+      opts.appendChild(b);
+    });
+    quizBox.appendChild(d);
+  });
+</script>
+</body>
+</html>
